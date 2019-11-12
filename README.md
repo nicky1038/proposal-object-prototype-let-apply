@@ -59,7 +59,7 @@ Takes a given `transform` function, applies it to the object on which `let` meth
 
 ```typescript
 // Typescript type definition
-apply<T extends unknown, R>(this: T, action: (t: T) => void): T
+apply<T extends unknown>(this: T, action: (t: T) => void): T
 ```
 
 Takes a given `action` function, applies it to the object on which `apply` method was called, and returns this object.
