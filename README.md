@@ -50,7 +50,7 @@ These two methods are the same as `let` and `also` methods in Kotlin language.
 
 ```typescript
 // Typescript type definition
-let<T : unknown, R>(this: T, transform: (t: T) => R): R
+let<T extends unknown, R>(this: T, transform: (t: T) => R): R
 ```
 
 Takes a given `transform` function, applies it to the object on which `let` method was called, and returns the result of `transform` function.
@@ -59,7 +59,7 @@ Takes a given `transform` function, applies it to the object on which `let` meth
 
 ```typescript
 // Typescript type definition
-apply<T : unknown, R>(this: T, action: (t: T) => void): T
+apply<T extends unknown, R>(this: T, action: (t: T) => void): T
 ```
 
 Takes a given `action` function, applies it to the object on which `apply` method was called, and returns this object.
